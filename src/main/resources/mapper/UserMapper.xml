@@ -10,6 +10,6 @@
         <result property="password" column="password" jdbcType="VARCHAR"/>
     </resultMap>
     <select id = "getObjectById" resultMap = "baseRes">
-        SELECT * FROM act_user where id = #{id};
+        SELECT * FROM user where id = #{id};
     </select>
 </mapper>
