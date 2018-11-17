@@ -12,4 +12,7 @@
     <select id = "getObjectById" resultMap = "baseRes">
         SELECT * FROM user where id = #{id};
     </select>
+    <insert id="insert" parameterType="com.wjf.domain.User">
+        insert  into user (username,password)values  (#{username},#{password})
+    </insert>
 </mapper>
