@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--导入名称空间有语法提示 -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 
 </head>
 
 <body class="text-center">
-success
+
+<h1>success</h1>
+<!--将文本内容设定成指定值 -->
+<div th:text="${hello}"></div>
+
+<!--不转义 -->
+<div th:utext="${hello}"></div>
+
+<h4>
+    <span  th:each="user:${users}" th:text="${user}"></span>
+</h4>
+
 
 </body>
 
