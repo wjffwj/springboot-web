@@ -1,0 +1,33 @@
+thymeleaf语法规则
+th:text 改变当前元素里边的文本内容
+th:each 便利
+th:if 条件判断
+th:value ,th:href ,th:src  修改指定属性默认值
+th:fragment 声明片段
+--------------------------------------------------------------
+表达式：
+${}   获取变量值（对象的属性，调用方法，）
+      使用内置对象ctx ,vars,locale,request,response,session,servletContext
+      工具对象：
+
+*{}   取对象中的属性 （配合th:object 使用）
+
+#{}   获取国际化内容
+
+@{}   定义url连接
+
+~{}    片段
+---------------------------------------------------------------
+如何修改SpringBoot的默认配置
+模式： 1.优先使用用户配置的 @Bean  @Components
+       2
+---------------------------------------------------------------
+扩展SpringMVC
+    <mvc:view-controller path="/hello" view-name="success"/>
+    <mvc:interceptors>
+
+编写配置类 （@Configuration ,type=WebMvcConfigureAdapter） 不能标注EnableWebMvc
+//使用webMVCconfigureAdapter可以扩展MVC的功能
+
+
+@EnableWebMvc在配置类中添加此注解 将全面接管springMVC不用springboot的默认配置,web场景的自动配置全部失效
