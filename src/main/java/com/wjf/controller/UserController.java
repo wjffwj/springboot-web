@@ -24,7 +24,6 @@ public class UserController {
         User u = userService.login(user);
         if(u!=null){
             return "/success";
-
         }
         return "/index";
     }
