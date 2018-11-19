@@ -13,6 +13,6 @@
         <result property="depId" column="dep_id" jdbcType="INTEGER"/>
     </resultMap>
     <select id="selectById" parameterType="java.lang.Integer" resultMap="baseRes">
-        select * from department where id =#{id}
+        select * from employee where id =#{id}
     </select>
 </mapper>

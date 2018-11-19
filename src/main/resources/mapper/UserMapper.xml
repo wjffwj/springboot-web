@@ -15,4 +15,8 @@
     <insert id="insert" parameterType="com.wjf.domain.User">
         insert  into user (username,password)values  (#{username},#{password})
     </insert>
+
+    <select id="login" parameterType="com.wjf.domain.User" resultMap="baseRes">
+        select * from user where username=#{username} and password =#{password}
+    </select>
 </mapper>
