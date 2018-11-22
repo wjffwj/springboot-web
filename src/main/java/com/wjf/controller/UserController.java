@@ -23,7 +23,7 @@ public class UserController {
         user.setPassword(password);
         User u = userService.login(user);
         if(u!=null){
-            return "/success";
+            return "/dashboard";
         }
         return "/index";
     }
